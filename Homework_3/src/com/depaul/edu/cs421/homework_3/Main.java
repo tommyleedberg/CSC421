@@ -5,10 +5,6 @@
  */
 package com.depaul.edu.cs421.homework_3;
 
-import com.depaul.edu.cs421.homework_3.implementations.ClosetPair;
-import com.depaul.edu.cs421.homework_3.implementations.CoordinatePair;
-import com.depaul.edu.cs421.homework_3.interfaces.IClosetPair;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +21,7 @@ public class Main
             return;
         }
 
-        IClosetPair closetPair = new ClosetPair(ReadInputFile(args[0]));
+        ClosetPair closetPair = new ClosetPair(ReadInputFile(args[0]));
         try
         {
             closetPair.GetClosetPair();
@@ -35,7 +31,7 @@ public class Main
             PrintError( ex.getMessage(), ex);
         }
 
-        Print(args[0].substring(args[0].lastIndexOf("\\") + 1, args[0].indexOf(".")) + " test file:");
+        Print(args[0].substring(args[0].lastIndexOf("\\") + 1) + " test file:");
         closetPair.Print();
     }
 
@@ -98,7 +94,7 @@ public class Main
     {
         warningStr =  "*********************WARNING********************\n" + warningStr + "/ n";
         warningStr += "*********************WARNING********************";
-        System.out.println(ConsoleColors.YELLOW + warningStr + ConsoleColors.RESET + " NORMAL");
+        System.out.println(warningStr);
     }
 
     /**
@@ -127,6 +123,6 @@ public class Main
     {
         errorStr = "*********************ERROR********************\n" + errorStr + "\n";
         errorStr += "*********************ERROR********************";
-        System.out.println(ConsoleColors.RED + errorStr + ConsoleColors.RESET);
+        System.out.println(errorStr);
     }
 }

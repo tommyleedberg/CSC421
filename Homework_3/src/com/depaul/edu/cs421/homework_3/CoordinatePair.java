@@ -1,8 +1,6 @@
-package com.depaul.edu.cs421.homework_3.implementations;
+package com.depaul.edu.cs421.homework_3;
 
-import com.depaul.edu.cs421.homework_3.interfaces.ICoordinatePair;
-
-public class CoordinatePair implements ICoordinatePair, Comparable<CoordinatePair>
+public class CoordinatePair implements  Comparable<CoordinatePair>
 {
     private int xCoordinate;
     private int yCoordinate;

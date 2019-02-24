@@ -3,15 +3,11 @@
  * Ddte: February 20, 2019
  * ownder: Tommy Leedberg
  */
-package com.depaul.edu.cs421.homework_3.implementations;
-
-import com.depaul.edu.cs421.homework_3.interfaces.IClosetPair;
-import com.depaul.edu.cs421.homework_3.interfaces.ICoordinatePair;
-import com.sun.corba.se.spi.transport.CorbaAcceptor;
+package com.depaul.edu.cs421.homework_3;
 
 import java.util.*;
 
-public class ClosetPair implements IClosetPair
+public class ClosetPair
 {
     public static Boolean DEBUG_MODE = false ;
 
